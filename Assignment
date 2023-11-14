@@ -1,0 +1,127 @@
+i.) DEFINE:
+1.Compiler-a special program that transforms source code written in high level to low level machine code.
+
+2.Source code-programming statements that are created by a programmer with a text editor or a visual programming tool and then saved in a file.
+
+3.Object code-output,a compiled file,which is produced when the source code is compiled with a c compiler.
+
+4.Linkers-utility program that takes the object files,produced by assembler and compiler, and other code to join them into a single executable file.
+
+ ii.)DIFFERENCE BETWEEN COMPILER AND INTERPRETER.
+Compiler:
+1.Translates code written in high level programming language into machine code of the whole program as a 
+whole.
+2.Stores machine language on the disk in the form of machine code.
+3.Generate intermediate machine code(output of low level language).
+4.Displays all the errors after compiling at the same time.
+5.Works on the basis of language-translation,linking-loading model.
+6.Target programs execute independently(don't require the compiler in the memory).
+7.Compiled programs run faster.
+
+Interpreter:
+1.Translates source code written in high level programming language into machine code line-by-line as the code runs.
+2.Does not store machine language at all.
+3.Don't generate any intermediate machine codes.
+4.Display the errors of every single line one by one.
+5.Work on the basis of interpretation method.
+6.Interpreter originally exists in the memory at the time of interpretation.
+7.Interpreted programs run slower in comparison to compiled programs.
+
+iii.)CATEGORIES OF OPERATORS IN C PROGRAMMING.
+    1.Arithmetic Operators.
+       Perform mathematical operations like addition,subtraction,multiplication,division etc on numerical values.
+
+Operator     Meaning of Operator     
++         -  addition or unaryplus
+-         -  subtraction or unary minus
+*         -  multiplication
+/         -  division
+%         -   remainder after division(modulo division)
+
+     2.Increment and decrement operators.
+        Increment(++) increases the value of the operand by 1.
+        Decrement(- -)decreases value of operand by 1.
+        These two operators are unary operators,they only operate on single operand.
+       These operators can be used as prefixes,before the operand, or as postfixes,after the operand,.
+
+        3.Assignment operators.
+           Used to assign a value to a variable.
+     Operator          Example           Same as
+      =               a = b             a = b
+      +=              a += b            a = a+b
+      -=              a-= b             a = a-b
+      *=              a *= b            a = a*b
+      /=              a /= b            a = a/b
+     %=               a %= b            a = a%b 
+
+        4.Relational operators.
+        Check the relationship between two operands.If the relation is true it returns 1,if the relation is false,it returns 0.
+
+        Operator               Meaning of
+                                Operator
+            ==                  Equal to
+             >                  Greater than
+             <                  Less than
+            !=                  Not equal to
+             >=                 Greater than or equal 
+             <=                 Less than or equal to
+
+         5.Logical operators.
+           An expression containing logical operator returns either 0 or 1 depending upon whether expression results true or false.
+
+             Operator             Meaning
+                 &&                 Logical AND. True only if all operands are true
+                  ||                Logical OR. True only if either one operand is true
+                  !                 Logical NOT. True only if the operand is 0
+
+        6.Bitwise operators.
+           During computation, mathematical operations like: addition, subtraction, multiplication, division, etc are converted to bit-level which makes processing faster and saves power.
+
+Bitwise operators are used in C programming to perform bit-level operations.
+
+     Operators          Meaning of operators
+          &               Bitwise AND
+          |               Bitwise OR
+          ^               Bitwise exclusive OR
+          ~               Bitwise complement
+          <<              Shift left
+          >>              Shift right
+
+c program for adding two numbers:
+#include<stdio.h>
+int main()
+{
+int i,j,sum=0;
+printf("Enter first number\n");
+scanf("%d",&i);
+printf("Enter second number\n");
+scanf("%d",&j);
+{
+sum=i+j;
+}
+printf("Sum of %d and %d is %d\n",i,j,sum);
+return 0;
+}
+
+c program for storing student details:
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+float programming,networking;
+char str1[100],str2[100],str3[100];
+printf("Enter the names of the student\n");
+gets(str1);
+printf("Enter the registration number of the student\n");
+gets(str2);
+printf("Enter the course of study\n");
+gets(str3);
+printf("Enter the score in programming\n");
+scanf("%f",&programming);
+printf("Enter the score in networking\n");
+scanf("%f",&networking);
+{
+printf("\nSTUDENT DETAILS\n");
+printf("%s\n%s\n%s\n scored:programming--->%f\nnetworking--->%f\n",str1,str2,str3,programming,networking);
+}
+}
